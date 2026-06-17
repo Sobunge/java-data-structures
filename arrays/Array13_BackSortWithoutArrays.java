@@ -13,11 +13,11 @@ public class Array13_BackSortWithoutArrays {
 
         //Swapping elements to get the largest to smallest
         for(int i=0; i< arr.length; i++){
-            for(int j=1; j< arr.length;j++){
-                if(arr[j] > arr[j-1]){
+            for(int j=i+1; j< arr.length;j++){
+                if(arr[j] > arr[i]){
                     //Declaring the temp value holder
-                    int temp = arr[j-1];
-                    arr[j-1] = arr[j];
+                    int temp = arr[i];
+                    arr[i] = arr[j];
                     arr[j] = temp;
                 }
             }

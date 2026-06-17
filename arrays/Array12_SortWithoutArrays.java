@@ -7,7 +7,7 @@ public class Array12_SortWithoutArrays {
     int[] numbers = { 3, 2, 1, 10, 11, 12, 16, 20, 100 };
 
     // Printing the sorted array
-    System.out.println("Sorted array from smallest to larest: " + Arrays.toString(sortArrayStoL(numbers)));
+    System.out.println("Sorted array from smallest to largest: " + Arrays.toString(sortArrayStoL(numbers)));
 
   }
 
@@ -16,12 +16,12 @@ public class Array12_SortWithoutArrays {
 
     // Swapping the elements from smallest to largest
     for (int j = 0; j < arr.length; j++) {
-      for (int i = 1; i < arr.length; i++) {
+      for (int i = j + 1; i < arr.length; i++) {
 
-        if (arr[i] < arr[i - 1]) {
+        if (arr[i] < arr[j]) {
           // Delcaring a temporary variable to hold the first array element
-          int temp = arr[i - 1];
-          arr[i - 1] = arr[i];
+          int temp = arr[j];
+          arr[j] = arr[i];
           arr[i] = temp;
 
         }
